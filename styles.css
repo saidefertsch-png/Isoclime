@@ -885,8 +885,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: 0.05em; }
   to { opacity: 1; }
 }
 
-.anim-slide-up { animation: slide-up 0.5s ease forwards; }
-.anim-fade-in { animation: fade-in 0.4s ease forwards; }
+.anim-slide-up { animation: slide-up 0.5s ease both; }
+.anim-fade-in { animation: fade-in 0.4s ease both; }
 
 /* ============================================================
    MISC UI COMPONENTS

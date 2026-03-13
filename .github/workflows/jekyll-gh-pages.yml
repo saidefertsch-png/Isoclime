@@ -1,0 +1,12 @@
+# This workflow is intentionally disabled.
+# Deployment is handled by deploy.yml which serves the static site directly.
+name: Jekyll (disabled)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deployment is handled by deploy.yml"
