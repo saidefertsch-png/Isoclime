@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IsoClime – Neighborhood Search</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<section class="screen" id="screen-search">
+  <!-- Nav -->
+  <header class="nav-header">
+    <a href="../index.html" class="nav-back" aria-label="Back to landing">← Back</a>
+    <span class="nav-logo">IsoClime</span>
+    <span class="pixel-label">Step 1/4</span>
+  </header>
+
+  <div class="screen-content">
+    <!-- Title -->
+    <div style="margin-bottom:20px;text-align:center" class="anim-slide-up">
+      <h1 style="font-size:1.3rem;color:var(--aqua);margin-bottom:6px">Locate Your Zone</h1>
+      <p class="pixel-label">Select your neighborhood to begin microclimate analysis</p>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-wrapper anim-slide-up" style="animation-delay:0.15s;margin-bottom:16px">
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Enter your neighborhood or zone…"
+        autocomplete="off"
+        aria-label="Search neighborhood"
+      />
+      <button class="search-btn" id="search-go-btn" aria-label="Search">🔍</button>
+    </div>
+
+    <!-- Suggestions dropdown -->
+    <div id="suggestions" class="glass-panel" style="display:none;margin-bottom:14px;padding:8px;border-radius:14px">
+    </div>
+
+    <!-- Map container -->
+    <div class="map-container anim-fade-in" style="animation-delay:0.3s">
+      <div id="leaflet-map"></div>
+      <!-- Scan overlay -->
+      <div class="scan-overlay" id="scan-overlay">
+        <div class="scan-line"></div>
+      </div>
+    </div>
+
+    <!-- Zone selected info -->
+    <div id="zone-info" style="display:none;margin-top:10px" class="anim-slide-up">
+      <div class="zone-info-banner">
+        <div>
+          <div class="pixel-label" style="margin-bottom:3px">Selected Zone</div>
+          <div class="zone-name" id="selected-zone-name">—</div>
+        </div>
+        <div class="analyzing-badge" id="analyzing-badge">
+          <div class="analyzing-dot"></div>
+          Analyzing…
+        </div>
+      </div>
+    </div>
+
+    <!-- Coordinates info -->
+    <div id="coord-info" style="display:none;margin-top:8px;padding:8px 14px;background:rgba(0,30,25,0.6);border-radius:8px">
+      <span class="pixel-label" id="coord-text">LAT: — | LNG: —</span>
+    </div>
+
+    <!-- Continue button -->
+    <div style="margin-top:24px;text-align:center">
+      <a
+        href="diagnosis.html"
+        class="btn-chrome"
+        id="continue-btn"
+        style="opacity:0.4;pointer-events:none;transition:opacity 0.4s"
+        aria-disabled="true"
+      >
+        Analyze Microclimate →
+      </a>
+    </div>
+
+    <!-- Legend -->
+    <div class="glass-panel" style="margin-top:20px;padding:14px 16px">
+      <div class="pixel-label" style="margin-bottom:10px">Map Legend</div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <div style="display:flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--text-secondary)">
+          <div style="width:12px;height:12px;border-radius:50%;background:var(--danger);box-shadow:0 0 6px var(--danger)"></div>
+          High Risk
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--text-secondary)">
+          <div style="width:12px;height:12px;border-radius:50%;background:var(--warning);box-shadow:0 0 6px var(--warning)"></div>
+          Moderate
+        </div>
+        <div style="display:flex;align-items:center;gap=6px;font-size:0.8rem;color:var(--text-secondary)">
+          <div style="width:12px;height:12px;border-radius:50%;background:var(--success);box-shadow:0 0 6px var(--success)"></div>
+          Low Risk
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="../app.js"></script>
+<script src="../screens/search.js"></script>
+</body>
+</html>

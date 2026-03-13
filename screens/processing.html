@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IsoClime – Analyzing Your Profile</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<section class="screen" id="screen-processing">
+  <div class="processing-container">
+    <!-- Chrome rings animation -->
+    <div class="chrome-rings" role="img" aria-label="Processing animation">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"></div>
+      <div class="ring-core">🌍</div>
+    </div>
+
+    <!-- Title -->
+    <div class="anim-fade-in" style="animation-delay:0.3s">
+      <h2 class="processing-title">Analyzing Your Microclimate Profile</h2>
+    </div>
+
+    <!-- Subtitle ticker -->
+    <p class="processing-sub anim-fade-in" id="processing-sub" style="animation-delay:0.5s">
+      Initializing AI engine…
+    </p>
+
+    <!-- Log stream -->
+    <div class="log-stream anim-fade-in" id="log-stream" style="animation-delay:0.7s">
+      <div class="log-line log-scan">[ SYS ] Booting IsoClime AI…</div>
+    </div>
+
+    <!-- Progress bar -->
+    <div style="width:100%;max-width:360px" class="anim-fade-in" style="animation-delay:0.9s">
+      <div class="progress-track">
+        <div class="progress-fill" id="proc-progress" style="width:0%"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:6px">
+        <span class="pixel-label" id="proc-status">INITIALIZING</span>
+        <span class="pixel-label" id="proc-pct">0%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="../app.js"></script>
+<script src="processing.js"></script>
+</body>
+</html>

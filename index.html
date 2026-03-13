@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IsoClime – Detect. Deflect. Protect. Microclimate analysis for your neighborhood." />
+  <title>IsoClime – Microclimate Intelligence</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Animated background canvas -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- Decorative floating icons -->
+<div class="deco-icons" aria-hidden="true">
+  <span class="deco-icon" style="top:8%;left:5%;animation-delay:0s">💧</span>
+  <span class="deco-icon" style="top:18%;left:88%;animation-delay:1.2s">🌿</span>
+  <span class="deco-icon" style="top:55%;left:4%;animation-delay:2s">☀️</span>
+  <span class="deco-icon" style="top:72%;left:90%;animation-delay:0.6s">🌡️</span>
+  <span class="deco-icon" style="top:35%;left:92%;animation-delay:3s">💨</span>
+  <span class="deco-icon" style="top:85%;left:8%;animation-delay:1.8s">🍃</span>
+  <!-- Chrome bubbles -->
+  <div class="chrome-bubble" style="width:80px;height:80px;top:10%;left:15%;animation-delay:0s"></div>
+  <div class="chrome-bubble" style="width:50px;height:50px;top:30%;left:80%;animation-delay:2s"></div>
+  <div class="chrome-bubble" style="width:120px;height:120px;top:65%;left:70%;animation-delay:1s"></div>
+  <div class="chrome-bubble" style="width:40px;height:40px;top:80%;left:20%;animation-delay:3s"></div>
+  <div class="chrome-bubble" style="width:60px;height:60px;top:45%;left:5%;animation-delay:1.5s"></div>
+</div>
+
+<!-- Landing screen -->
+<section class="screen" id="screen-landing" role="main">
+  <header class="nav-header">
+    <span class="pixel-label">v2.0.0</span>
+    <span class="pixel-label">IsoClime.io</span>
+  </header>
+
+  <div class="landing-hero">
+    <!-- Logo -->
+    <div class="logo-chrome anim-slide-up" style="animation-delay:0.1s">
+      <div class="logo-main">
+        <span class="logo-iso">ISO</span>CLIME
+      </div>
+    </div>
+
+    <!-- Tagline -->
+    <p class="tagline anim-slide-up" style="animation-delay:0.3s">
+      <span>Detect.</span> <span>Deflect.</span> <span>Protect.</span>
+    </p>
+
+    <!-- Subtitle panel -->
+    <div class="glass-panel subtitle-panel anim-slide-up" style="animation-delay:0.5s">
+      <p class="subtitle-text">Bringing Microclimates into Focus</p>
+    </div>
+
+    <!-- CTA -->
+    <a href="screens/search.html" class="btn-chrome anim-slide-up" style="animation-delay:0.7s" id="start-btn">
+      <span>🌍</span> Start Climate Diagnosis
+    </a>
+
+    <!-- Stats strip -->
+    <div class="glass-panel anim-slide-up" style="animation-delay:0.9s;padding:14px 24px;display:flex;gap:32px;align-items:center">
+      <div style="text-align:center">
+        <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--aqua)">200+</div>
+        <div class="pixel-label">Zones</div>
+      </div>
+      <div style="width:1px;height:32px;background:var(--glass-border)"></div>
+      <div style="text-align:center">
+        <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--aqua)">AI</div>
+        <div class="pixel-label">Powered</div>
+      </div>
+      <div style="width:1px;height:32px;background:var(--glass-border)"></div>
+      <div style="text-align:center">
+        <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--aqua)">Real</div>
+        <div class="pixel-label">Time Data</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="text-align:center;padding:16px;position:relative;z-index:1">
+    <span class="pixel-label">© 2024 IsoClime Environmental Intelligence</span>
+  </footer>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>

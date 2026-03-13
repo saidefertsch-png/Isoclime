@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IsoClime – Climate Diagnosis</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<section class="screen" id="screen-diagnosis">
+  <!-- Nav -->
+  <header class="nav-header">
+    <a href="search.html" class="nav-back" aria-label="Back">← Back</a>
+    <span class="nav-logo">IsoClime</span>
+    <span class="pixel-label" id="step-label">Step 2/4</span>
+  </header>
+
+  <div class="screen-content">
+    <!-- Title -->
+    <div style="margin-bottom:18px;text-align:center" class="anim-slide-up">
+      <h1 style="font-size:1.25rem;color:var(--aqua);margin-bottom:6px">AI Climate Diagnosis</h1>
+      <p class="pixel-label">Answer to generate your microclimate profile</p>
+    </div>
+
+    <!-- Progress bar -->
+    <div style="margin-bottom:20px;animation-delay:0.1s" class="anim-slide-up">
+      <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+        <span class="pixel-label">Progress</span>
+        <span class="pixel-label" id="progress-pct">0%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+      </div>
+    </div>
+
+    <!-- Questions container -->
+    <div id="questions-container"></div>
+
+    <!-- Navigation buttons -->
+    <div style="display:flex;gap:12px;justify-content:space-between;margin-top:8px" class="anim-slide-up">
+      <button class="btn-chrome btn-chrome-outline btn-sm" id="prev-btn" style="display:none" onclick="diagnosisNav(-1)">
+        ← Previous
+      </button>
+      <button class="btn-chrome btn-sm" id="next-btn" style="margin-left:auto;opacity:0.4;pointer-events:none" onclick="diagnosisNav(1)">
+        Next →
+      </button>
+    </div>
+  </div>
+</section>
+
+<script src="../app.js"></script>
+<script src="diagnosis.js"></script>
+</body>
+</html>
