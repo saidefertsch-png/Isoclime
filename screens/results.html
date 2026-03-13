@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IsoClime – Results Dashboard</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<section class="screen" id="screen-results">
+  <!-- Nav -->
+  <header class="nav-header">
+    <a href="../index.html" class="nav-back" aria-label="Back to home">⌂ Home</a>
+    <span class="nav-logo">IsoClime</span>
+    <span class="pixel-label">Results</span>
+  </header>
+
+  <div class="screen-content">
+    <!-- Header card -->
+    <div class="glass-panel anim-slide-up" style="padding:18px 20px;margin-bottom:20px;text-align:center">
+      <div class="pixel-label" style="margin-bottom:4px">Microclimate Profile Complete</div>
+      <h1 style="font-size:1.15rem;color:var(--aqua);margin-bottom:8px">Your Climate Risk Report</h1>
+      <div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap" id="zone-chips">
+        <!-- Chips filled by JS -->
+      </div>
+    </div>
+
+    <!-- Zone Climate Risk -->
+    <div class="risk-section anim-slide-up" style="animation-delay:0.2s">
+      <div class="section-title">🌡️ Zone Climate Risk</div>
+      <div class="chrome-panel">
+        <div class="gauges-row" id="gauges-row">
+          <!-- Gauges filled by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommended Actions -->
+    <div class="risk-section anim-slide-up" style="animation-delay:0.4s">
+      <div class="section-title">⚡ Recommended Actions</div>
+      <div id="recommendations-list">
+        <!-- Cards filled by JS -->
+      </div>
+    </div>
+
+    <!-- Action buttons -->
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px" class="anim-slide-up" style="animation-delay:0.6s">
+      <button class="btn-chrome btn-sm" onclick="window.print()">📄 Export Report</button>
+      <a href="../index.html" class="btn-chrome btn-chrome-outline btn-sm">🔄 New Diagnosis</a>
+    </div>
+  </div>
+</section>
+
+<script src="../app.js"></script>
+<script src="results.js"></script>
+</body>
+</html>
