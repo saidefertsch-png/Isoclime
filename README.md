@@ -3,6 +3,15 @@
 > **Detect. Deflect. Protect.**  
 > Bringing Microclimates into Focus
 
+## 🌐 Live Preview
+
+**👉 [https://saidefertsch-png.github.io/Isoclime/](https://saidefertsch-png.github.io/Isoclime/)**
+
+> The app is automatically deployed to GitHub Pages from the `main` branch.  
+> If it's not live yet, go to **Settings → Pages** in the repository and set the source to **GitHub Actions**.
+
+---
+
 IsoClime is a Y2K retro-futuristic interactive web app for microclimate analysis. It helps users identify environmental risks in their neighborhood and receive AI-powered recommendations.
 
 ## Features
@@ -23,14 +32,16 @@ IsoClime is a Y2K retro-futuristic interactive web app for microclimate analysis
 | Processing | `screens/processing.html` | AI analysis animation |
 | Results | `screens/results.html` | Dashboard with gauges and recommendations |
 
-## Usage
+## Running Locally
 
 Simply open `index.html` in a modern web browser. No build step required — all dependencies are loaded via CDN.
 
 ```bash
-# Using Python's built-in server (optional)
+# Clone and serve with Python's built-in server
+git clone https://github.com/saidefertsch-png/Isoclime.git
+cd Isoclime
 python3 -m http.server 8080
-# Then open http://localhost:8080
+# Then open http://localhost:8080 in your browser
 ```
 
 ## Tech Stack
